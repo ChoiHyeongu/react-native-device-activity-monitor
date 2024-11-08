@@ -15,6 +15,22 @@
 		461A46C96AA3E76812E3C282 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 59CB80DCA2A5B294E8DE0929 /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		DE1EFF5D2CA7D65B00110664 /* SegmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1EFF5C2CA7D65B00110664 /* SegmentType.swift */; };
+		DE2B9C322C9EDD980076B608 /* DeviceActivityApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B9C312C9EDD980076B608 /* DeviceActivityApplication.swift */; };
+		DE2B9C362C9EE4100076B608 /* ActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B9C352C9EE4100076B608 /* ActivityApp.swift */; };
+		DE2B9C392C9EFAED0076B608 /* DeviceActivityReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B9C372C9EF9DD0076B608 /* DeviceActivityReportViewModel.swift */; };
+		DEA33BEE2C9D565D00A60E89 /* DeviceActivityReportManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33BEC2C9D565D00A60E89 /* DeviceActivityReportManager.swift */; };
+		DEA33BF02C9D60A500A60E89 /* DeviceActivityReportManager.m in Sources */ = {isa = PBXBuildFile; fileRef = DEA33BED2C9D565D00A60E89 /* DeviceActivityReportManager.m */; };
+		DEA33C072C9D75B400A60E89 /* ActivityMonitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C062C9D75B400A60E89 /* ActivityMonitor.swift */; };
+		DEA33C092C9D75B400A60E89 /* TotalActivityReport.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C082C9D75B400A60E89 /* TotalActivityReport.swift */; };
+		DEA33C0B2C9D75B400A60E89 /* TotalActivityView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C0A2C9D75B400A60E89 /* TotalActivityView.swift */; };
+		DEA33C102C9D75B400A60E89 /* ActivityMonitor.appex in Embed ExtensionKit Extensions */ = {isa = PBXBuildFile; fileRef = DEA33C042C9D75B400A60E89 /* ActivityMonitor.appex */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		DEA33C182C9D763900A60E89 /* DeviceActivityReportAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C172C9D763900A60E89 /* DeviceActivityReportAdapter.swift */; };
+		DEA33C1A2C9D76A400A60E89 /* DeviceActivityHostingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C192C9D76A400A60E89 /* DeviceActivityHostingView.swift */; };
+		DEA33C1C2C9D778100A60E89 /* RequestFamilyCountrolMemberAdapter.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C1B2C9D778100A60E89 /* RequestFamilyCountrolMemberAdapter.swift */; };
+		DEA33C242C9D7B8F00A60E89 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C1E2C9D7B8F00A60E89 /* ActivitiesView.swift */; };
+		DEA33C252C9D7B8F00A60E89 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C1F2C9D7B8F00A60E89 /* ListItem.swift */; };
+		DEA33C272C9D7B8F00A60E89 /* DeviceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C222C9D7B8F00A60E89 /* DeviceActivity.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -25,7 +41,28 @@
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
 			remoteInfo = ReactNativeDeviceActivityReport;
 		};
+		DEA33C0E2C9D75B400A60E89 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = DEA33C032C9D75B400A60E89;
+			remoteInfo = ActivityMonitor;
+		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		DEA33C142C9D75B500A60E89 /* Embed ExtensionKit Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(EXTENSIONS_FOLDER_PATH)";
+			dstSubfolderSpec = 16;
+			files = (
+				DEA33C102C9D75B400A60E89 /* ActivityMonitor.appex in Embed ExtensionKit Extensions */,
+			);
+			name = "Embed ExtensionKit Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		00E356EE1AD99517003FC87E /* ReactNativeDeviceActivityReportTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ReactNativeDeviceActivityReportTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -41,11 +78,31 @@
 		19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3B4392A12AC88292D35C810B /* Pods-ReactNativeDeviceActivityReport.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDeviceActivityReport.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeDeviceActivityReport/Pods-ReactNativeDeviceActivityReport.debug.xcconfig"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-ReactNativeDeviceActivityReport.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDeviceActivityReport.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeDeviceActivityReport/Pods-ReactNativeDeviceActivityReport.release.xcconfig"; sourceTree = "<group>"; };
-		59CB80DCA2A5B294E8DE0929 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; name = PrivacyInfo.xcprivacy; path = ReactNativeDeviceActivityReport/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		59CB80DCA2A5B294E8DE0929 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xml; name = PrivacyInfo.xcprivacy; path = ReactNativeDeviceActivityReport/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		5B7EB9410499542E8C5724F5 /* Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.debug.xcconfig"; path = "Target Support Files/Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests/Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-ReactNativeDeviceActivityReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeDeviceActivityReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeDeviceActivityReport/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests/Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig"; sourceTree = "<group>"; };
+		DE1EFF5C2CA7D65B00110664 /* SegmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentType.swift; sourceTree = "<group>"; };
+		DE2B9C312C9EDD980076B608 /* DeviceActivityApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityApplication.swift; sourceTree = "<group>"; };
+		DE2B9C352C9EE4100076B608 /* ActivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityApp.swift; sourceTree = "<group>"; };
+		DE2B9C372C9EF9DD0076B608 /* DeviceActivityReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportViewModel.swift; sourceTree = "<group>"; };
+		DEA33BEB2C9D565D00A60E89 /* ReactNativeDeviceActivityReport-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "ReactNativeDeviceActivityReport-Bridging-Header.h"; sourceTree = "<group>"; };
+		DEA33BEC2C9D565D00A60E89 /* DeviceActivityReportManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportManager.swift; sourceTree = "<group>"; };
+		DEA33BED2C9D565D00A60E89 /* DeviceActivityReportManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceActivityReportManager.m; sourceTree = "<group>"; };
+		DEA33C042C9D75B400A60E89 /* ActivityMonitor.appex */ = {isa = PBXFileReference; explicitFileType = "wrapper.extensionkit-extension"; includeInIndex = 0; path = ActivityMonitor.appex; sourceTree = BUILT_PRODUCTS_DIR; };
+		DEA33C062C9D75B400A60E89 /* ActivityMonitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityMonitor.swift; sourceTree = "<group>"; };
+		DEA33C082C9D75B400A60E89 /* TotalActivityReport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityReport.swift; sourceTree = "<group>"; };
+		DEA33C0A2C9D75B400A60E89 /* TotalActivityView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TotalActivityView.swift; sourceTree = "<group>"; };
+		DEA33C0C2C9D75B400A60E89 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		DEA33C0D2C9D75B400A60E89 /* ActivityMonitor.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = ActivityMonitor.entitlements; sourceTree = "<group>"; };
+		DEA33C172C9D763900A60E89 /* DeviceActivityReportAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportAdapter.swift; sourceTree = "<group>"; };
+		DEA33C192C9D76A400A60E89 /* DeviceActivityHostingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityHostingView.swift; sourceTree = "<group>"; };
+		DEA33C1B2C9D778100A60E89 /* RequestFamilyCountrolMemberAdapter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RequestFamilyCountrolMemberAdapter.swift; sourceTree = "<group>"; };
+		DEA33C1D2C9D7A4500A60E89 /* ReactNativeDeviceActivityReport.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = ReactNativeDeviceActivityReport.entitlements; path = ReactNativeDeviceActivityReport/ReactNativeDeviceActivityReport.entitlements; sourceTree = "<group>"; };
+		DEA33C1E2C9D7B8F00A60E89 /* ActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
+		DEA33C1F2C9D7B8F00A60E89 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
+		DEA33C222C9D7B8F00A60E89 /* DeviceActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceActivity.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -63,6 +120,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				0C80B921A6F3F58F76C31292 /* libPods-ReactNativeDeviceActivityReport.a in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA33C012C9D75B400A60E89 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -89,6 +153,11 @@
 		13B07FAE1A68108700A75B9A /* ReactNativeDeviceActivityReport */ = {
 			isa = PBXGroup;
 			children = (
+				DE1EFF5B2CA7D65000110664 /* Model */,
+				DEA33C1D2C9D7A4500A60E89 /* ReactNativeDeviceActivityReport.entitlements */,
+				DEA33C162C9D761800A60E89 /* DeviceActivityAdapter */,
+				DEA33C152C9D75DF00A60E89 /* DeviceActivityManager */,
+				DEA33BF82C9D6BA700A60E89 /* HostingView */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
@@ -97,6 +166,7 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */,
 				59CB80DCA2A5B294E8DE0929 /* PrivacyInfo.xcprivacy */,
+				DEA33BEB2C9D565D00A60E89 /* ReactNativeDeviceActivityReport-Bridging-Header.h */,
 			);
 			name = ReactNativeDeviceActivityReport;
 			sourceTree = "<group>";
@@ -124,6 +194,7 @@
 				13B07FAE1A68108700A75B9A /* ReactNativeDeviceActivityReport */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
 				00E356EF1AD99517003FC87E /* ReactNativeDeviceActivityReportTests */,
+				DEA33C052C9D75B400A60E89 /* ActivityMonitor */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -138,6 +209,7 @@
 			children = (
 				13B07F961A680F5B00A75B9A /* ReactNativeDeviceActivityReport.app */,
 				00E356EE1AD99517003FC87E /* ReactNativeDeviceActivityReportTests.xctest */,
+				DEA33C042C9D75B400A60E89 /* ActivityMonitor.appex */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -151,6 +223,74 @@
 				89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		DE1EFF5B2CA7D65000110664 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				DE1EFF5C2CA7D65B00110664 /* SegmentType.swift */,
+			);
+			name = Model;
+			sourceTree = "<group>";
+		};
+		DEA33BF82C9D6BA700A60E89 /* HostingView */ = {
+			isa = PBXGroup;
+			children = (
+				DEA33C192C9D76A400A60E89 /* DeviceActivityHostingView.swift */,
+			);
+			name = HostingView;
+			sourceTree = "<group>";
+		};
+		DEA33C052C9D75B400A60E89 /* ActivityMonitor */ = {
+			isa = PBXGroup;
+			children = (
+				DEA33C232C9D7B8F00A60E89 /* Models */,
+				DEA33C202C9D7B8F00A60E89 /* Views */,
+				DEA33C062C9D75B400A60E89 /* ActivityMonitor.swift */,
+				DEA33C082C9D75B400A60E89 /* TotalActivityReport.swift */,
+				DEA33C0A2C9D75B400A60E89 /* TotalActivityView.swift */,
+				DEA33C0C2C9D75B400A60E89 /* Info.plist */,
+				DEA33C0D2C9D75B400A60E89 /* ActivityMonitor.entitlements */,
+			);
+			path = ActivityMonitor;
+			sourceTree = "<group>";
+		};
+		DEA33C152C9D75DF00A60E89 /* DeviceActivityManager */ = {
+			isa = PBXGroup;
+			children = (
+				DEA33BED2C9D565D00A60E89 /* DeviceActivityReportManager.m */,
+				DEA33BEC2C9D565D00A60E89 /* DeviceActivityReportManager.swift */,
+			);
+			path = DeviceActivityManager;
+			sourceTree = "<group>";
+		};
+		DEA33C162C9D761800A60E89 /* DeviceActivityAdapter */ = {
+			isa = PBXGroup;
+			children = (
+				DEA33C172C9D763900A60E89 /* DeviceActivityReportAdapter.swift */,
+				DEA33C1B2C9D778100A60E89 /* RequestFamilyCountrolMemberAdapter.swift */,
+				DE2B9C372C9EF9DD0076B608 /* DeviceActivityReportViewModel.swift */,
+			);
+			name = DeviceActivityAdapter;
+			sourceTree = "<group>";
+		};
+		DEA33C202C9D7B8F00A60E89 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				DEA33C1E2C9D7B8F00A60E89 /* ActivitiesView.swift */,
+				DEA33C1F2C9D7B8F00A60E89 /* ListItem.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		DEA33C232C9D7B8F00A60E89 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				DEA33C222C9D7B8F00A60E89 /* DeviceActivity.swift */,
+				DE2B9C312C9EDD980076B608 /* DeviceActivityApplication.swift */,
+				DE2B9C352C9EE4100076B608 /* ActivityApp.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -188,15 +328,34 @@
 				00DD1BFF1BD5951E006B06BC /* Bundle React Native code and images */,
 				00EEFC60759A1932668264C0 /* [CP] Embed Pods Frameworks */,
 				E235C05ADACE081382539298 /* [CP] Copy Pods Resources */,
+				DEA33C142C9D75B500A60E89 /* Embed ExtensionKit Extensions */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				DEA33C0F2C9D75B400A60E89 /* PBXTargetDependency */,
 			);
 			name = ReactNativeDeviceActivityReport;
 			productName = ReactNativeDeviceActivityReport;
 			productReference = 13B07F961A680F5B00A75B9A /* ReactNativeDeviceActivityReport.app */;
 			productType = "com.apple.product-type.application";
+		};
+		DEA33C032C9D75B400A60E89 /* ActivityMonitor */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = DEA33C112C9D75B500A60E89 /* Build configuration list for PBXNativeTarget "ActivityMonitor" */;
+			buildPhases = (
+				DEA33C002C9D75B400A60E89 /* Sources */,
+				DEA33C012C9D75B400A60E89 /* Frameworks */,
+				DEA33C022C9D75B400A60E89 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = ActivityMonitor;
+			productName = ActivityMonitor;
+			productReference = DEA33C042C9D75B400A60E89 /* ActivityMonitor.appex */;
+			productType = "com.apple.product-type.extensionkit-extension";
 		};
 /* End PBXNativeTarget section */
 
@@ -204,6 +363,7 @@
 		83CBB9F71A601CBA00E9B192 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 1540;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					00E356ED1AD99517003FC87E = {
@@ -211,7 +371,10 @@
 						TestTargetID = 13B07F861A680F5B00A75B9A;
 					};
 					13B07F861A680F5B00A75B9A = {
-						LastSwiftMigration = 1120;
+						LastSwiftMigration = 1540;
+					};
+					DEA33C032C9D75B400A60E89 = {
+						CreatedOnToolsVersion = 15.4;
 					};
 				};
 			};
@@ -230,6 +393,7 @@
 			targets = (
 				13B07F861A680F5B00A75B9A /* ReactNativeDeviceActivityReport */,
 				00E356ED1AD99517003FC87E /* ReactNativeDeviceActivityReportTests */,
+				DEA33C032C9D75B400A60E89 /* ActivityMonitor */,
 			);
 		};
 /* End PBXProject section */
@@ -249,6 +413,13 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				461A46C96AA3E76812E3C282 /* PrivacyInfo.xcprivacy in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA33C022C9D75B400A60E89 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -398,8 +569,30 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEA33BEE2C9D565D00A60E89 /* DeviceActivityReportManager.swift in Sources */,
+				DEA33C1C2C9D778100A60E89 /* RequestFamilyCountrolMemberAdapter.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
+				DE2B9C392C9EFAED0076B608 /* DeviceActivityReportViewModel.swift in Sources */,
+				DE1EFF5D2CA7D65B00110664 /* SegmentType.swift in Sources */,
+				DEA33BF02C9D60A500A60E89 /* DeviceActivityReportManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
+				DEA33C1A2C9D76A400A60E89 /* DeviceActivityHostingView.swift in Sources */,
+				DEA33C182C9D763900A60E89 /* DeviceActivityReportAdapter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		DEA33C002C9D75B400A60E89 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DEA33C272C9D7B8F00A60E89 /* DeviceActivity.swift in Sources */,
+				DEA33C252C9D7B8F00A60E89 /* ListItem.swift in Sources */,
+				DE2B9C362C9EE4100076B608 /* ActivityApp.swift in Sources */,
+				DEA33C0B2C9D75B400A60E89 /* TotalActivityView.swift in Sources */,
+				DEA33C072C9D75B400A60E89 /* ActivityMonitor.swift in Sources */,
+				DEA33C092C9D75B400A60E89 /* TotalActivityReport.swift in Sources */,
+				DE2B9C322C9EDD980076B608 /* DeviceActivityApplication.swift in Sources */,
+				DEA33C242C9D7B8F00A60E89 /* ActivitiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -411,6 +604,11 @@
 			target = 13B07F861A680F5B00A75B9A /* ReactNativeDeviceActivityReport */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
+		DEA33C0F2C9D75B400A60E89 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = DEA33C032C9D75B400A60E89 /* ActivityMonitor */;
+			targetProxy = DEA33C0E2C9D75B400A60E89 /* PBXContainerItemProxy */;
+		};
 /* End PBXTargetDependency section */
 
 /* Begin XCBuildConfiguration section */
@@ -418,7 +616,9 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				DEVELOPMENT_TEAM = 8QDYJBK99R;
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
@@ -445,8 +645,10 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
+				DEVELOPMENT_TEAM = 8QDYJBK99R;
 				INFOPLIST_FILE = ReactNativeDeviceActivityReportTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -469,9 +671,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-ReactNativeDeviceActivityReport.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ReactNativeDeviceActivityReport/ReactNativeDeviceActivityReport.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8QDYJBK99R;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = ReactNativeDeviceActivityReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -486,6 +691,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeDeviceActivityReport;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeDeviceActivityReport-Bridging-Header.h";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -496,9 +702,12 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-ReactNativeDeviceActivityReport.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = ReactNativeDeviceActivityReport/ReactNativeDeviceActivityReport.entitlements;
 				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 8QDYJBK99R;
 				INFOPLIST_FILE = ReactNativeDeviceActivityReport/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -512,6 +721,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = ReactNativeDeviceActivityReport;
+				SWIFT_OBJC_BRIDGING_HEADER = "ReactNativeDeviceActivityReport-Bridging-Header.h";
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
 			};
@@ -590,10 +800,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -666,14 +873,94 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;
 				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		DEA33C122C9D75B500A60E89 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ActivityMonitor/ActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 8QDYJBK99R;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeDeviceActivityReport.ActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		DEA33C132C9D75B500A60E89 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CODE_SIGN_ENTITLEMENTS = ActivityMonitor/ActivityMonitor.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COPY_PHASE_STRIP = NO;
+				CURRENT_PROJECT_VERSION = 1;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 8QDYJBK99R;
+				ENABLE_USER_SCRIPT_SANDBOXING = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = ActivityMonitor/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = ActivityMonitor;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.5;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@executable_path/../../Frameworks",
+				);
+				LOCALIZATION_PREFERS_STRING_CATALOGS = YES;
+				MARKETING_VERSION = 1.0;
+				MTL_FAST_MATH = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = org.reactjs.native.example.ReactNativeDeviceActivityReport.ActivityMonitor;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
 			};
 			name = Release;
 		};
@@ -703,6 +990,15 @@
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,
 				83CBBA211A601CBA00E9B192 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		DEA33C112C9D75B500A60E89 /* Build configuration list for PBXNativeTarget "ActivityMonitor" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				DEA33C122C9D75B500A60E89 /* Debug */,
+				DEA33C132C9D75B500A60E89 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
