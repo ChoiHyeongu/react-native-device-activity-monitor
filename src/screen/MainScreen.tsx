@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useState} from 'react';
 import {
   StyleSheet,
   View,
@@ -7,44 +7,95 @@ import {
   TouchableOpacity,
 } from 'react-native';
 import {DeviceActivityReport} from '../components';
-import {Segment} from '../enums';
 
 function MainScreen(): React.JSX.Element {
-  const [segment, setSegment] = React.useState<Segment>(Segment.Daily);
+  const [interval, setInterval] = useState<'hourly' | 'daily' | 'weekly'>(
+    'daily',
+  );
+  const [startDate, setStartDate] = useState(new Date());
+  const [endDate, setEndDate] = useState(new Date());
+  const [users, setUsers] = useState<'all' | 'children'>('all');
+  const [devices, setDevices] = useState<('iPhone' | 'iPad')[]>(['iPhone']);
 
-  function onPressSegment(value: Segment) {
-    setSegment(value);
-  }
+  const toggleInterval = () => {
+    const nextInterval =
+      interval === 'hourly'
+        ? 'daily'
+        : interval === 'daily'
+        ? 'weekly'
+        : 'hourly';
+    setInterval(nextInterval);
+  };
+
+  const toggleUsers = () => {
+    setUsers(users === 'all' ? 'children' : 'all');
+  };
+
+  const toggleDevices = () => {
+    setDevices(prevDevices =>
+      prevDevices.includes('iPhone') ? ['iPad'] : ['iPhone'],
+    );
+  };
+
+  const changeStartDate = () => {
+    const newStartDate = new Date(startDate.getTime() - 24 * 60 * 60 * 1000);
+    setStartDate(newStartDate);
+  };
+
+  const changeEndDate = () => {
+    const newEndDate = new Date(endDate.getTime() + 24 * 60 * 60 * 1000);
+    setEndDate(newEndDate);
+  };
 
   return (
     <SafeAreaView style={styles.container}>
-      <View style={styles.segmentButtonContainer}>
-        <Button
-          label={'Hourly'}
-          onPress={() => onPressSegment(Segment.Hourly)}
-        />
-        <Button label={'Daily'} onPress={() => onPressSegment(Segment.Daily)} />
-        <Button
-          label={'Weekly'}
-          onPress={() => onPressSegment(Segment.Weekly)}
-        />
-      </View>
-      <DeviceActivityReport segment={segment} style={styles.screeTime} />
-    </SafeAreaView>
-  );
-}
+      <View>
+        <Text style={styles.label}>Interval: {interval}</Text>
+        <TouchableOpacity style={styles.button} onPress={toggleInterval}>
+          <Text style={styles.buttonText}>Toggle Interval</Text>
+        </TouchableOpacity>
 
-function Button({label}: {label: string; onPress: () => void}) {
-  return (
-    <TouchableOpacity style={styles.buttonContainer}>
-      <Text style={styles.buttonLabel}>{label}</Text>
-    </TouchableOpacity>
+        <Text style={styles.label}>
+          Start Date: {startDate.toISOString().split('T')[0]}
+        </Text>
+        <TouchableOpacity style={styles.button} onPress={changeStartDate}>
+          <Text style={styles.buttonText}>Change Start Date (-1 day)</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.label}>
+          End Date: {endDate.toISOString().split('T')[0]}
+        </Text>
+        <TouchableOpacity style={styles.button} onPress={changeEndDate}>
+          <Text style={styles.buttonText}>Change End Date (+1 day)</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.label}>Users: {users}</Text>
+        <TouchableOpacity style={styles.button} onPress={toggleUsers}>
+          <Text style={styles.buttonText}>Toggle Users</Text>
+        </TouchableOpacity>
+
+        <Text style={styles.label}>Devices: {devices.join(', ')}</Text>
+        <TouchableOpacity style={styles.button} onPress={toggleDevices}>
+          <Text style={styles.buttonText}>Toggle Devices</Text>
+        </TouchableOpacity>
+      </View>
+
+      <DeviceActivityReport
+        segmentInterval={{
+          type: interval,
+          start: +startDate,
+          end: +endDate,
+        }}
+        style={styles.screeTime}
+      />
+    </SafeAreaView>
   );
 }
 
 const styles = StyleSheet.create({
   container: {
     flex: 1,
+    padding: 16,
   },
   screeTime: {
     flex: 1,
@@ -53,19 +104,22 @@ const styles = StyleSheet.create({
     paddingBottom: 16,
     paddingHorizontal: 12,
   },
-  segmentButtonContainer: {
-    flexDirection: 'row',
-  },
-  buttonContainer: {
-    flex: 1,
-    height: 60,
-    justifyContent: 'center',
+  button: {
+    backgroundColor: '#007BFF',
+    padding: 12,
+    marginVertical: 8,
+    borderRadius: 8,
     alignItems: 'center',
-    borderRadius: 12,
   },
-  buttonLabel: {
-    fontSize: 20,
-    fontWeight: '700',
+  buttonText: {
+    color: '#FFFFFF',
+    fontSize: 16,
+    fontWeight: 'bold',
+  },
+  label: {
+    fontSize: 16,
+    fontWeight: '600',
+    marginVertical: 4,
   },
 });
 

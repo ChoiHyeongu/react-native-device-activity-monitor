@@ -15,7 +15,7 @@ struct ActivitiesView: View {
         
         VStack {
             ScrollView(.horizontal) {
-                HStack {
+                VStack {
                     ForEach(activities.apps) { app in
                         ListItem(app: app)
                     }

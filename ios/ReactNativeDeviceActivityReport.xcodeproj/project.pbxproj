@@ -15,7 +15,6 @@
 		461A46C96AA3E76812E3C282 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 59CB80DCA2A5B294E8DE0929 /* PrivacyInfo.xcprivacy */; };
 		7699B88040F8A987B510C191 /* libPods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 19F6CBCC0A4E27FBF8BF4A61 /* libPods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.a */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		DE1EFF5D2CA7D65B00110664 /* SegmentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE1EFF5C2CA7D65B00110664 /* SegmentType.swift */; };
 		DE2B9C322C9EDD980076B608 /* DeviceActivityApplication.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B9C312C9EDD980076B608 /* DeviceActivityApplication.swift */; };
 		DE2B9C362C9EE4100076B608 /* ActivityApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B9C352C9EE4100076B608 /* ActivityApp.swift */; };
 		DE2B9C392C9EFAED0076B608 /* DeviceActivityReportViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = DE2B9C372C9EF9DD0076B608 /* DeviceActivityReportViewModel.swift */; };
@@ -31,6 +30,9 @@
 		DEA33C242C9D7B8F00A60E89 /* ActivitiesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C1E2C9D7B8F00A60E89 /* ActivitiesView.swift */; };
 		DEA33C252C9D7B8F00A60E89 /* ListItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C1F2C9D7B8F00A60E89 /* ListItem.swift */; };
 		DEA33C272C9D7B8F00A60E89 /* DeviceActivity.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEA33C222C9D7B8F00A60E89 /* DeviceActivity.swift */; };
+		DEC355332CE1EC7E001391B4 /* SegmentIntervalParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355322CE1EC7E001391B4 /* SegmentIntervalParser.swift */; };
+		DEC355352CE1EC96001391B4 /* DeviceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355342CE1EC96001391B4 /* DeviceParser.swift */; };
+		DEC355372CE1ECB0001391B4 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355362CE1ECB0001391B4 /* DateUtils.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -83,7 +85,6 @@
 		5DCACB8F33CDC322A6C60F78 /* libPods-ReactNativeDeviceActivityReport.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-ReactNativeDeviceActivityReport.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = ReactNativeDeviceActivityReport/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig"; path = "Target Support Files/Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests/Pods-ReactNativeDeviceActivityReport-ReactNativeDeviceActivityReportTests.release.xcconfig"; sourceTree = "<group>"; };
-		DE1EFF5C2CA7D65B00110664 /* SegmentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentType.swift; sourceTree = "<group>"; };
 		DE2B9C312C9EDD980076B608 /* DeviceActivityApplication.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityApplication.swift; sourceTree = "<group>"; };
 		DE2B9C352C9EE4100076B608 /* ActivityApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityApp.swift; sourceTree = "<group>"; };
 		DE2B9C372C9EF9DD0076B608 /* DeviceActivityReportViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportViewModel.swift; sourceTree = "<group>"; };
@@ -103,6 +104,9 @@
 		DEA33C1E2C9D7B8F00A60E89 /* ActivitiesView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ActivitiesView.swift; sourceTree = "<group>"; };
 		DEA33C1F2C9D7B8F00A60E89 /* ListItem.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListItem.swift; sourceTree = "<group>"; };
 		DEA33C222C9D7B8F00A60E89 /* DeviceActivity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DeviceActivity.swift; sourceTree = "<group>"; };
+		DEC355322CE1EC7E001391B4 /* SegmentIntervalParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentIntervalParser.swift; sourceTree = "<group>"; };
+		DEC355342CE1EC96001391B4 /* DeviceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceParser.swift; sourceTree = "<group>"; };
+		DEC355362CE1ECB0001391B4 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -153,7 +157,7 @@
 		13B07FAE1A68108700A75B9A /* ReactNativeDeviceActivityReport */ = {
 			isa = PBXGroup;
 			children = (
-				DE1EFF5B2CA7D65000110664 /* Model */,
+				DEC355312CE1EC6B001391B4 /* Utils */,
 				DEA33C1D2C9D7A4500A60E89 /* ReactNativeDeviceActivityReport.entitlements */,
 				DEA33C162C9D761800A60E89 /* DeviceActivityAdapter */,
 				DEA33C152C9D75DF00A60E89 /* DeviceActivityManager */,
@@ -225,14 +229,6 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
-		DE1EFF5B2CA7D65000110664 /* Model */ = {
-			isa = PBXGroup;
-			children = (
-				DE1EFF5C2CA7D65B00110664 /* SegmentType.swift */,
-			);
-			name = Model;
-			sourceTree = "<group>";
-		};
 		DEA33BF82C9D6BA700A60E89 /* HostingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -291,6 +287,16 @@
 				DE2B9C352C9EE4100076B608 /* ActivityApp.swift */,
 			);
 			path = Models;
+			sourceTree = "<group>";
+		};
+		DEC355312CE1EC6B001391B4 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				DEC355322CE1EC7E001391B4 /* SegmentIntervalParser.swift */,
+				DEC355342CE1EC96001391B4 /* DeviceParser.swift */,
+				DEC355362CE1ECB0001391B4 /* DateUtils.swift */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -569,11 +575,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DEC355372CE1ECB0001391B4 /* DateUtils.swift in Sources */,
+				DEC355332CE1EC7E001391B4 /* SegmentIntervalParser.swift in Sources */,
 				DEA33BEE2C9D565D00A60E89 /* DeviceActivityReportManager.swift in Sources */,
+				DEC355352CE1EC96001391B4 /* DeviceParser.swift in Sources */,
 				DEA33C1C2C9D778100A60E89 /* RequestFamilyCountrolMemberAdapter.swift in Sources */,
 				13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */,
 				DE2B9C392C9EFAED0076B608 /* DeviceActivityReportViewModel.swift in Sources */,
-				DE1EFF5D2CA7D65B00110664 /* SegmentType.swift in Sources */,
 				DEA33BF02C9D60A500A60E89 /* DeviceActivityReportManager.m in Sources */,
 				13B07FC11A68108700A75B9A /* main.m in Sources */,
 				DEA33C1A2C9D76A400A60E89 /* DeviceActivityHostingView.swift in Sources */,
