@@ -12,24 +12,9 @@ struct ActivitiesView: View {
     var activities: DeviceActivity
     
     var body: some View {
-        
-        VStack {
-            ScrollView(.horizontal) {
-                VStack {
-                    ForEach(activities.apps) { app in
-                        ListItem(app: app)
-                    }
-                }
-            }
+        List(activities.apps) { app in
+            ListItem(app: app)
         }
-        
-    }
-}
-
-struct ActivitiesView_Previews: PreviewProvider {
-    static var previews: some View {
-        ActivitiesView(activities: DeviceActivity(duration: .zero, apps: [
-          ActivityApp(id: "ID", totalDuration: TimeInterval())
-        ]))
+        .listStyle(.plain) // 기본 스타일 지정
     }
 }

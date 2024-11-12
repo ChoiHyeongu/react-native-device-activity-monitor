@@ -1,43 +1,44 @@
 import SwiftUI
+import DeviceActivity
+import FamilyControls
+import ManagedSettings
 
 struct ListItem: View {
-    private let app: ActivityApp
-    @State private var isTapped = false // 클릭 상태를 관리하는 상태 변수
-    
-    init(app: ActivityApp) {
-        self.app = app
-    }
+  private let app: ActivityApp
   
-    // DateComponentsFormatter 설정
-    let formatter: DateComponentsFormatter = {
-        let formatter = DateComponentsFormatter()
-        formatter.allowedUnits = [.hour, .minute, .second] // 시, 분, 초를 표시하도록 설정
-        formatter.unitsStyle = .full // 시, 분, 초 단위 표시를 위한 설정
-        return formatter
-    }()
-    
-    func formattedDuration(_ duration: TimeInterval) -> String {
-        let hours = Int(duration) / 3600
-        let minutes = (Int(duration) % 3600) / 60
-        let seconds = Int(duration) % 60
+  init(app: ActivityApp) {
+    self.app = app
+  }
+  
+  // DateComponentsFormatter 설정
+  private static let formatter: DateComponentsFormatter = {
+    let formatter = DateComponentsFormatter()
+    formatter.allowedUnits = [.hour, .minute, .second]
+    formatter.unitsStyle = .abbreviated // 간결한 단위 스타일로 변경 (예: 1h 30m)
+    return formatter
+  }()
+  
+  var body: some View {
+    HStack(spacing: 12) {
+      Label(app.token)
+        .labelStyle(.iconOnly)
+        .padding(.leading, 8)
+      
+      VStack(alignment: .leading, spacing: 4) {
+        Text(app.localizedName ?? "Unknown App")
+          .lineLimit(1)
+          .truncationMode(.tail)
+          .font(.body)
         
-        // 시, 분, 초로 표시하는 문자열 구성
-        return "\(hours)시 \(minutes)분 \(seconds)초"
+        Text(Self.formatter.string(from: app.totalActivityDuration) ?? "0s")
+          .lineLimit(1)
+          .font(.caption)
+          .foregroundColor(.gray)
+      }
+      
+      Spacer()
     }
-    
-    var body: some View {
-        HStack {
-            VStack(alignment: .leading) {
-                Text(app.localizedName ?? "No Named")
-                Text(app.bundleIdentifier ?? "No Named")
-                    .font(.caption)
-            }
-            Spacer()
-            
-            // totalDuration을 시, 분, 초로 표시
-            Text(formattedDuration(app.totalDuration))
-        }
-        .padding()
-        .cornerRadius(8) // 모서리를 둥글게
-    }
+    .padding(.vertical, 12)
+    .padding(.horizontal, 16)
+  }
 }

@@ -1,1 +1,1 @@
-export * from './DeviceActivityReport';
+export * from "./DeviceActivityReport";

@@ -33,6 +33,7 @@
 		DEC355332CE1EC7E001391B4 /* SegmentIntervalParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355322CE1EC7E001391B4 /* SegmentIntervalParser.swift */; };
 		DEC355352CE1EC96001391B4 /* DeviceParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355342CE1EC96001391B4 /* DeviceParser.swift */; };
 		DEC355372CE1ECB0001391B4 /* DateUtils.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355362CE1ECB0001391B4 /* DateUtils.swift */; };
+		DEC3553A2CE2EACB001391B4 /* DeviceActivityReportHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = DEC355392CE2EACB001391B4 /* DeviceActivityReportHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -107,6 +108,7 @@
 		DEC355322CE1EC7E001391B4 /* SegmentIntervalParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SegmentIntervalParser.swift; sourceTree = "<group>"; };
 		DEC355342CE1EC96001391B4 /* DeviceParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceParser.swift; sourceTree = "<group>"; };
 		DEC355362CE1ECB0001391B4 /* DateUtils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateUtils.swift; sourceTree = "<group>"; };
+		DEC355392CE2EACB001391B4 /* DeviceActivityReportHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceActivityReportHelper.swift; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -247,6 +249,7 @@
 				DEA33C0A2C9D75B400A60E89 /* TotalActivityView.swift */,
 				DEA33C0C2C9D75B400A60E89 /* Info.plist */,
 				DEA33C0D2C9D75B400A60E89 /* ActivityMonitor.entitlements */,
+				DEC355392CE2EACB001391B4 /* DeviceActivityReportHelper.swift */,
 			);
 			path = ActivityMonitor;
 			sourceTree = "<group>";
@@ -600,6 +603,7 @@
 				DEA33C072C9D75B400A60E89 /* ActivityMonitor.swift in Sources */,
 				DEA33C092C9D75B400A60E89 /* TotalActivityReport.swift in Sources */,
 				DE2B9C322C9EDD980076B608 /* DeviceActivityApplication.swift in Sources */,
+				DEC3553A2CE2EACB001391B4 /* DeviceActivityReportHelper.swift in Sources */,
 				DEA33C242C9D7B8F00A60E89 /* ActivitiesView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -808,7 +812,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -881,7 +888,10 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = "$(inherited)  ";
+				OTHER_LDFLAGS = (
+					"$(inherited)",
+					" ",
+				);
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

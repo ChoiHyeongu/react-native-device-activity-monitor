@@ -1,12 +1,13 @@
-import {ViewStyle} from 'react-native';
-import {Segment} from '../../enums';
+import { ViewStyle } from "react-native";
+
+import { Device, User } from "@/enum";
 
 export interface DeviceActivityReportProps extends ViewStyle {
   /**
    * ### @requires 세그먼트
    */
   segmentInterval: {
-    type: 'hourly' | 'daily' | 'weekly';
+    type: "hourly" | "daily" | "weekly";
     start: number;
     end: number;
   };
@@ -14,12 +15,12 @@ export interface DeviceActivityReportProps extends ViewStyle {
   /**
    * ### 사용자
    */
-  users?: 'all' | 'children';
+  users?: User;
 
   /**
    * ### 디바이스
    */
-  devices?: ('iPhone' | 'iPad')[];
+  devices?: Device[];
 
   /**
    * ### @todo 어플리케이션
